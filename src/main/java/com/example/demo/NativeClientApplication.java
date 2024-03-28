@@ -28,7 +28,9 @@ public class NativeClientApplication {
     	props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
 		props.put("client.id", "kafka-producer");
 		props.put("compression.type", "snappy");
-		// important
+		// important for performance
+        props.put("linger.ms", 0);
+        props.put("batch.size", 16384);
 		props.put("acks", "all");
 		props.put("retries", 3);
 		props.put("max.in.flight.requests.per.connection", 1);
