@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Bean;
 public class NativeClientApplication {
 
     public static void main(String[] args) {
-		SpringApplication.run(SpringKafkaApplication.class, args);
+		SpringApplication.run(NativeClientApplication.class, args);
 	}
 
 	@Bean
